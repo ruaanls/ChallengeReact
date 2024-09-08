@@ -1,0 +1,63 @@
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #001B74;
+    margin: 0;
+    padding:  0.8% 4%;
+    position: sticky;
+    top: 0;
+}
+
+.header img
+{
+    width: 10%;
+    height: 20%;
+}
+
+.menu
+{
+    display: inherit;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: center;
+    border: none;
+}
+
+.header a
+{
+    text-decoration: none;
+    border-bottom: none;
+}
+
+.menu a p, .loginHeader a p
+{
+    
+    color: white;
+    border: none;
+    font-size: 1.4rem;
+}
+
+.loginHeader
+{
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    width: 15%;
+}
+
+.loginHeader button
+{
+    background-color: #0065FC;
+    text-decoration: none;
+    border: none;
+    padding: 4%;
+    width: 100%;
+    color: white;
+    font-size: 1.3rem;
+    border-radius: 10px;
+    
+}
+
