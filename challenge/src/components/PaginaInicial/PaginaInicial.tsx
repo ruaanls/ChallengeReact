@@ -47,7 +47,7 @@ export default function PaginaInicial()
                         <img src={img} alt="" className={styles.bannerImg} />
                     </div>
 
-                    <h1>Conheça alguns de nossos serviços</h1>
+                    <h1 className={styles.titulo}>Conheça alguns de nossos serviços</h1>
                     <div className={styles.cardsContainer}>
                         <div className={styles.card}>
                             <img src={oleo} alt="IMG" />
