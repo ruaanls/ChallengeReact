@@ -149,6 +149,7 @@ body
     border-radius: 12px;
     background-color: #EBEBEB;
     color: #1F1F1F;
+    margin-bottom: 2rem;
 }
 
 .bannerContainer button
@@ -187,6 +188,7 @@ body
     width: 100%;
     text-align: start;
     color: #1F1F1F;
+    margin: 10px;
 }
 .bannerImg
 {
