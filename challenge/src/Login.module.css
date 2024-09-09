@@ -57,7 +57,7 @@
     
     
 }
-.form input
+.linha input
 {
     width: 100%;
     border: none;
@@ -84,10 +84,16 @@
     padding: 3.5%;
     background: linear-gradient(to right, #003c97 9%, #082770 19%, #020848 84%);
     color: white;
-    width: 45%;
+    width: 100%;
     border-radius: 20px;
     font-size: 1.5rem;
     font-weight: 600;
     border: none;
     cursor: pointer;
+}
+.linha p
+{
+    color: rgb(253, 38, 38);
+    font-weight: bold;
+    font-size: 1.3rem;
 }
