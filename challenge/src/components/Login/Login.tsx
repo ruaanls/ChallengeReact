@@ -1,33 +1,26 @@
 import styles from '../../Login.module.css';
+import img from "../../img/img-login.png";
 
 export default function Login() {
     return (
         <main>
-            <div className={styles.imagemLogin}>
-                <img src="/img/logo-porto.png" alt="Centro Automotivo" />
-            </div>
-
-            <div className={styles.AcessoContaConteiner}>
-                <div className={styles.LoginDiv}>
-                    <div className={styles.Alinhar}>
-                    <h2>Acesse sua Conta</h2>
-                    <form>
-                        <input type="text" placeholder="CPF"/>
-                        <input type="password" placeholder="Senha" />
-                    </form>
-                    <button className={styles.button}>Criar Conta</button>
-                    </div>
+            <div className={styles.cadastroGeral}>
+                <div className={styles.containerImg}>
+                    <img src={img} alt="" />
                 </div>
-                
-                <div className={styles.LoginFooterConteiner}>
-                    <div className={styles.EsqueciSenha}>
-                        <img src="" alt="" />
-                        <h3>Esqueci Minha Senha</h3>
+                <div className={styles.containerExternoForm}>
+                    <div className={styles.containerForm}>
+                        <h1>Bem-vindo de volta :)</h1>
+                        <form className={styles.form}>
+                            <input type="text" placeholder="CPF" required minLength={11} pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" className={styles.cpf}/>
+                        </form>
+                        <form className={styles.form}>
+                            <input type="password" placeholder="Senha" required minLength={5} />
+                        </form>
+                        <button>Entrar</button>
+                        
                     </div>
-                    <div className={styles.PrecisoAjuda}>
-                        <img src="" alt="" />
-                        <h3>Preciso de Ajuda</h3>
-                    </div>
+                    
                 </div>
             </div>
         </main>

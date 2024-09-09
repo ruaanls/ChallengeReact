@@ -1,100 +1,119 @@
-/** {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+.cadastroGeral
+{
+    display: flex;
+
+    
 }
 
-/* Define o layout do elemento main */
-/*main {
-    display: flex;
+.containerImg
+{
+    width: 40%;
+    
+}
+.containerImg img
+{
     width: 100%;
-    height: 100vh;
-    background-image: url(/img/oficina.png);
-    background-attachment: fixed;
-    background-repeat: round;
-    background-size: auto;
-    justify-content: flex-start;
-    z-index: 1;
+    height: 100%;
+}
+.containerExternoForm
+{
+    background: linear-gradient(to right, #0c2f88 3%, #082770 15%, #020848 84%);
+    
+    
+    width: 60%;
+    padding: 2% 5%;
+    
 }
 
-/* Área de cadastro */
-.AcessoContaConteiner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: linear-gradient(160deg, #0C2858 32%, #04132A 68%);
-    width: 55%; /* Mantém 60% de largura */
-    padding: 2% 0; /* Adiciona um espaçamento na parte inferior */
-}
-
-.textVeiculo {
-    text-align: center;
-    margin-bottom: 30px; /* Espaço entre o texto e o formulário */
-    color: whitesmoke;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.textVeiculo h1 {
-    font-size: 2rem;
-    margin-bottom: 10px;
-}
-
-.textVeiculo h3 {
-    font-size: 1.1rem;
-}
-
-.LoginDiv {
-    background: linear-gradient(160deg, rgba(4, 54, 104, 0.908) 0%, rgb(9, 81, 152) 50%, rgba(0, 122, 204, 0.297) 100%);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 5%;
-    margin: 0 15%; /* Mantém as margens laterais */
-}
-
-.GridCadastro {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-}
-
-.GridCadastro form {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.Alinhar h2 {
-    text-align: center;
-    padding-bottom: 5%;
-    color: whitesmoke;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.LoginDiv input {
-    background: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 5px;
-    padding: 10px;
-    font-size: 16px;
-    color: #333;
-    width: 48%;
-}
-
-/*button {
-    background-color: #007bff;
+.textos{
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    width: 100%;
-    margin-top: 20px;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 2.7rem;
 }
 
-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
+.divTextosp
+{
+    display: flex;
+    justify-content: center;
 }
-*/
+.textosp
+{
+    color: white;
+    
+    width: 70%;
+    font-size: 1.2rem;
+}
+.containerForm
+{
+    background: linear-gradient(to right, #082263 57%, #00154A 78%, #001345 100%);
+    width: 80%;
+    padding: 5%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    border-radius: 12px;
+    
+}
+
+.containerForm h1
+{
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 5%;
+}
+.form
+{
+    display: inherit;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+    margin-bottom: 10%;
+    
+    
+}
+.form input
+{
+    width: 100%;
+    border: none;
+    padding: 2% 5%;
+    background-color: rgba(255, 0, 0, 0);
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.LoginFooterConteiner
+{
+    display: flex;
+    background-color: #082770;
+}
+
+.placa
+{
+    width: 50% !important;
+}
+
+.ano
+{
+    width: 30% !important;
+}
+
+
+
+
+.containerForm button
+{
+    padding: 3.5%;
+    background: linear-gradient(to right, #003c97 9%, #082770 19%, #020848 84%);
+    color: white;
+    width: 45%;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}

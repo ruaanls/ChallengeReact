@@ -1,136 +1,93 @@
-/* Reseta margens e preenchimentos para todos os elementos */
-/* * {
-    margin: 0;
-    padding: 0;
-}*/
-
-/* Define o layout do elemento main */
-
-/*main {
+.cadastroGeral
+{
     display: flex;
-    width: 100%;
-    height: 100vh; /* Garante que o main ocupe toda a altura da tela */
-    /*background-image: url(/img/bh-centros-automotivos-2.png);
-    background-size: cover; /* A imagem de fundo cobre todo o elemento */
-    /*background-position: center; /* Centraliza a imagem de fundo */
-/*}
 
-.imagemLogin img{
-    width: 25%;
+    
 }
 
-/* Estilo para a área da imagem de fundo */
-.imagemLogin {
-    width: 50%; /* Ocupa 50% da largura da tela */
-    height: 80%; /* Ocupa toda a altura da tela */
-    display: flex;
-    align-items: flex-start; /* Alinha o conteúdo ao topo */
-    justify-content: flex-start; /* Alinha o conteúdo ao início */
-    padding: 20px; /* Adiciona um espaçamento interno */
+.containerImg
+{
+    width: 40%;
+    
 }
-
-/* Estilo para a área de login */
-.AcessoContaConteiner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: linear-gradient(160deg, #0C2858 32%, #04132A 68%);
-    width: 50%; /* Define a largura da área de login para 50% da tela */
-    height: 100%; /* Ocupa toda a altura da tela */
-    z-index: 1; /* Garante que a área de login fique acima da imagem de fundo */
-    position: relative; /* Necessário para o posicionamento do logo */
-}
-
-/* Estilo para o formulário de login */
-.LoginDiv {
-    background: linear-gradient(160deg, 
-        rgba(4, 54, 104, 0.908) 0%, 
-        rgb(9, 81, 152) 50%, 
-        rgba(0, 122, 204, 0.297) 100% 
-    );
-    backdrop-filter: blur(10px); /* Adiciona um desfoque ao fundo */
-    border-radius: 12px; /* Adiciona bordas arredondadas */
-    padding-top: 5%; /* Ajusta o espaçamento interno para um valor mais consistente */
-    margin-top: 5%;
+.containerImg img
+{
     width: 100%;
     height: 100%;
-    max-width: 500px; /* Define uma largura máxima para o formulário */
 }
-
-/* Estilo para os campos de entrada do formulário */
-.LoginDiv input[type="text"],
-.LoginDiv input[type="password"] {
-    background: rgba(255, 255, 255, 0.8); /* Fundo branco com 80% de opacidade */
-    border: 1px solid rgba(0, 0, 0, 0.2); /* Borda cinza clara */
-    border-radius: 5px; /* Bordas arredondadas */
-    padding: 10px; /* Espaçamento interno */
-    font-size: 16px; /* Tamanho da fonte */
-    color: #333; /* Cor do texto */
-    outline: none; /* Remove a borda de foco padrão */
-    transition: border-color 0.3s, box-shadow 0.3s; /* Transições suaves */
-    width: 95%; /* Faz com que o input ocupe toda a largura disponível */
-    margin-bottom: 15px; /* Espaçamento entre os campos */
+.containerExternoForm
+{
+    background: linear-gradient(to right, #0c2f88 3%, #082770 15%, #020848 84%);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    padding: 2% 5%;
+    
 }
-
-.Alinhar h2{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 2.5em;
-    margin-bottom: 15%;
+.containerForm
+{
+    background: linear-gradient(to right, #082263 57%, #00154A 78%, #001345 100%);
+    width: 50%;
+    padding: 10% 5%;
     color: white;
-}
-
-/* Estilo para os campos de entrada quando em foco */
-.LoginDiv input[type="text"]:focus,
-.LoginDiv input[type="password"]:focus {
-    border-color: #007bff; /* Cor da borda ao focar */
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Sombra ao focar */
-}
-
-/* Estilo para o botão */
-/*button {
-    background-color: #007bff;
-    color: white;
-    padding: 3% 35.3%; /* Ajusta o espaçamento interno 
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px; 
-    transition: background-color 0.3s, transform 0.3s; 
-}
-
-
-button:hover {
-    background-color: #0056b3; 
-    transform: scale(1.05); 
-}
-
-/* Estilo para o alinhamento do conteúdo */
-.Alinhar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%; /* Garante que o conteúdo dentro seja centralizado */
+    height: fit-content;
+    border-radius: 12px;
+    
 }
 
-/* Estilo para o rodapé da área de login */
-.LoginFooterConteiner {
+.containerForm h1
+{
+    text-align: center;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 5%;
+}
+.form
+{
     display: inherit;
-    justify-content: space-between;
-    margin-top: 8%;
-    padding: 8%;
-    width: 84%; 
-    background-color: rgb(3, 3, 3);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #ffffff;
-}
-
-.LoginFooterConteiner div {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    width: 100%;
+    gap: 32px;
+    margin-bottom: 10%;
+    
+    
+}
+.form input
+{
+    width: 100%;
+    border: none;
+    padding: 2% 5%;
+    background-color: rgba(255, 0, 0, 0);
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+    margin-bottom: 10%;
 }
 
-.LoginFooterConteiner img {
-    width: 24px; /* Ajusta o tamanho das imagens */
-    margin-bottom: 5px; /* Espaçamento abaixo das imagens */
+.LoginFooterConteiner
+{
+    display: flex;
+    background-color: #082770;
+}
+
+
+
+
+
+.containerForm button
+{
+    padding: 3.5%;
+    background: linear-gradient(to right, #003c97 9%, #082770 19%, #020848 84%);
+    color: white;
+    width: 45%;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
 }

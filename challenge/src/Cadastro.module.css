@@ -17,7 +17,7 @@
 }
 .containerExternoForm
 {
-    background: linear-gradient(to right, #003c97 3%, #082770 19%, #020848 84%);
+    background: linear-gradient(to right, #0c2f88 3%, #082770 15%, #020848 84%);
     
     
     width: 60%;
@@ -26,7 +26,7 @@
 }
 .containerForm
 {
-    background-color: #0f3eb6;
+    background: linear-gradient(to right, #082263 57%, #00154A 78%, #001345 100%);
     width: 80%;
     padding: 5%;
     color: white;
