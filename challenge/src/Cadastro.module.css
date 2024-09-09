@@ -1,0 +1,97 @@
+.cadastroGeral
+{
+    display: flex;
+
+    
+}
+
+.containerImg
+{
+    width: 40%;
+    
+}
+.containerImg img
+{
+    width: 100%;
+    height: 100%;
+}
+.containerExternoForm
+{
+    background: linear-gradient(to right, #003c97 3%, #082770 19%, #020848 84%);
+    
+    
+    width: 60%;
+    padding: 2% 5%;
+    
+}
+.containerForm
+{
+    background-color: #0f3eb6;
+    width: 80%;
+    padding: 5%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    border-radius: 12px;
+    
+}
+
+.containerForm h1
+{
+    text-align: start;
+    width: 100%;
+    font-weight: 500;
+    margin-bottom: 5%;
+}
+.form
+{
+    display: inherit;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+    margin-bottom: 10%;
+    
+    
+}
+.form input
+{
+    width: 100%;
+    border: none;
+    padding: 2% 5%;
+    background-color: rgba(255, 0, 0, 0);
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.LoginFooterConteiner
+{
+    display: flex;
+    background-color: #082770;
+}
+
+.cpf, .celular
+{
+    width: 40% !important;
+}
+
+.nome
+{
+    width: 100%!important;
+}
+
+
+.containerForm button
+{
+    padding: 3.5%;
+    background: linear-gradient(to right, #003c97 9%, #082770 19%, #020848 84%);
+    color: white;
+    width: 45%;
+    border-radius: 20px;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}

@@ -1,57 +1,60 @@
-* {
+/** {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
 /* Define o layout do elemento main */
-main {
+/*main {
     display: flex;
     width: 100%;
     height: 100vh;
-    background-image: url(/img/bh-centros-automotivos-2.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url(/img/oficina.png);
     background-attachment: fixed;
-}
-
-/* Estilo para a área da imagem de fundo */
-.imagemLogin {
-    width: 30%; /* Mantém a logo ocupando 30% da tela */
-    display: flex;
-    align-items: flex-start; /* Alinha a logo ao topo */
+    background-repeat: round;
+    background-size: auto;
     justify-content: flex-start;
-    padding: 3%;
-}
-
-.imagemLogin img {
-    width: 40%; /* Faz a logo ocupar toda a largura da área definida */
+    z-index: 1;
 }
 
 /* Área de cadastro */
 .AcessoContaConteiner {
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Garante que os elementos preencham toda a área disponível */
+    justify-content: center;
     background: linear-gradient(160deg, #0C2858 32%, #04132A 68%);
-    width: 70%; /* Define a largura para 70% */
-    gap: 15%;
+    width: 55%; /* Mantém 60% de largura */
+    padding: 2% 0; /* Adiciona um espaçamento na parte inferior */
 }
 
-/* Estilo para o formulário de login */
+.textVeiculo {
+    text-align: center;
+    margin-bottom: 30px; /* Espaço entre o texto e o formulário */
+    color: whitesmoke;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.textVeiculo h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.textVeiculo h3 {
+    font-size: 1.1rem;
+}
+
 .LoginDiv {
     background: linear-gradient(160deg, rgba(4, 54, 104, 0.908) 0%, rgb(9, 81, 152) 50%, rgba(0, 122, 204, 0.297) 100%);
     backdrop-filter: blur(10px);
     border-radius: 12px;
     padding: 5%;
-    margin: 5% 15% 1% 15%;
+    margin: 0 15%; /* Mantém as margens laterais */
 }
 
 .GridCadastro {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espaçamento entre as fileiras */
+    gap: 15px;
     width: 100%;
 }
 
@@ -61,14 +64,13 @@ main {
     width: 100%;
 }
 
-.Alinhar h2{
+.Alinhar h2 {
     text-align: center;
     padding-bottom: 5%;
     color: whitesmoke;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* Ajusta o estilo dos inputs */
 .LoginDiv input {
     background: rgba(255, 255, 255, 0.8);
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -76,10 +78,10 @@ main {
     padding: 10px;
     font-size: 16px;
     color: #333;
-    width: 48%; /* Cada input ocupa 48% da largura */
+    width: 48%;
 }
 
-button {
+/*button {
     background-color: #007bff;
     color: white;
     padding: 10px 20px;
@@ -95,18 +97,4 @@ button:hover {
     background-color: #0056b3;
     transform: scale(1.05);
 }
-
-/* Estilo para o rodapé da área de login */
-.LoginFooterConteiner {
-    display: flex;
-    justify-content: space-between; /* Coloca os itens nas extremidades */
-    background-color: rgb(3, 3, 3);
-    padding: 6%;
-    color: #fff;
-    width: 100%;
-}
-
-.LoginFooterConteiner h3 {
-    
-    font-size: 1.2em;
-}
+*/

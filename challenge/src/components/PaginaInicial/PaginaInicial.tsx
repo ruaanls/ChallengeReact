@@ -3,16 +3,18 @@ import oleo from "../../../public/img/img-troca-oleo.png";
 import revisao from "../../../public/img/img-revisao.png";
 import bateria from "../../../public/img/img-bateria.png";
 import styles from "../../Pinicial.module.css";
+import { Link } from "react-router-dom";
 export default function PaginaInicial()
 {
     return(
         <main>
+            
             <div className={styles.containerInicio}>
                 <div className={styles.inicial}>
                     <p>Centros Automotivos Porto</p>
                     <h1>O <span>lugar perfeito para</span> quem ama <span>carros</span></h1>
                     <p className={styles.textoHome}>Manutenções, revisões e pequenos reparos para quem tem seguro auto quanto para quem não tem.</p>
-                    <button className={styles.botaoHome}><h1>Agende um serviço</h1></button>
+                    <button className={styles.botaoHome}><Link to={"/manutencao"}><h1>Agende um serviço</h1></Link></button>
                 </div>
             </div>
             
@@ -23,9 +25,9 @@ export default function PaginaInicial()
                 </div>
                 
                 <div className={styles.opcaoPrincipal}>
-                    <button className="opcao"><h1>Marcar Conserto</h1><p>Agende uma visita para consertar ou realizar pequenos reparos no seu veículo</p></button>
-                    <button className="opcao"><h1>Realizar pré-diagnóstico</h1><p>Use nossa IA para ter um pré-diagnóstico e pré-orçamento</p></button>
-                    <button className="opcao"><h1>Cadastrar Veículos</h1><p>Cadastre o seu veículo para usar nossas outras funcionalidades</p></button>
+                    <button className="opcao"><Link to={"/manutencao"}><h1>Marcar Conserto</h1><p>Agende uma visita para consertar ou realizar pequenos reparos no seu veículo</p></Link></button>
+                    <button className="opcao"><Link to={"/manutencao"}><h1>Realizar pré-diagnóstico</h1><p>Use nossa IA para ter um pré-diagnóstico e pré-orçamento</p></Link></button>
+                    <button className="opcao"><Link to={"/cadastroVeiculo"}><h1>Cadastrar Veículos</h1><p>Cadastre o seu veículo para usar nossas outras funcionalidades</p></Link></button>
                 </div> 
 
                 <div className={styles.containerMapa}>
@@ -42,7 +44,7 @@ export default function PaginaInicial()
                         <div className={styles.bannerTxt}>
                             <h1>Tenha um <span>pré-diagnóstico</span> do seu problema com <span>orçamento</span> agora.</h1>
                             <p>Conte com o nosso assistente virtual para ter um pré diagnóstico com pré-orçamento</p>
-                            <button><h1>Fazer pré-análise agora.</h1></button>
+                            <button><Link to={"/manutencao"}><h1>Fazer pré-análise agora.</h1></Link></button>
                         </div>
                         <img src={img} alt="" className={styles.bannerImg} />
                     </div>

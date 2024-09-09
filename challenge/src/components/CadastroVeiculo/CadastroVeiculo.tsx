@@ -1,4 +1,4 @@
-import styles from '../../style/CadastroVeiculo.module.css';
+import styles from "../../CadastroVeiculo.module.css";
 
 export default function CadastroVeiculo() {
     return (
