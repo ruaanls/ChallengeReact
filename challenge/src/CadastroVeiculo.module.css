@@ -67,10 +67,11 @@
 }
 .form
 {
-    display: inherit;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     width: 100%;
-    gap: 32px;
+    
     margin-bottom: 10%;
     
     
@@ -94,12 +95,12 @@
 
 .placa
 {
-    width: 50% !important;
+    width: 80% !important;
 }
 
 .ano
 {
-    width: 30% !important;
+    width: 40% !important;
 }
 
 
@@ -116,4 +117,23 @@
     font-weight: 600;
     border: none;
     cursor: pointer;
+}
+
+.linhaContainer
+{
+    display: flex;
+    margin-bottom: 2rem;
+    gap: 64px;
+}
+
+.linha
+{
+    width: 50%;
+}
+
+.linha p
+{
+    color: rgb(224, 22, 22);
+    font-size: 1.3rem;
+    font-weight: bold;
 }
