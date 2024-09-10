@@ -6,9 +6,10 @@ import { yupResolver } from "@hookform/resolvers/yup"
 import { number, object, string } from "yup";
 
 
+
 export default function Cadastro() {
     const schema = object({
-        cpf:string().required("Campo Obrigatório").min(11,"Seu CPF deve ter 11 dígitos ").max(11,"Seu CPF deve ter 11 dígitos"),
+        cpf:string().required("Campo Obrigatório").min(11,"Seu CPF deve ter 11 dígitos ").max(14,"Seu CPF deve ter no máximo 14 dígitos"),
         nome:string().required("Campo Obrigatório").min(3,"Seu deve ter mais que 3 letras "),
         celular:string().required("Campo Obrigatório").min(11,"Seu celular deve ter 11 números "), 
         email:string().required("Campo Obrigatório"),
@@ -19,9 +20,52 @@ export default function Cadastro() {
     })
     
     const {register, handleSubmit: onSubmit, watch, formState: {errors}} = useForm({resolver:yupResolver(schema)});
+    const [criarDiv, setCriarDiv] = useState(false);
     
     const handleSubmit = (dados:any) => {
-           console.log(dados);
+
+        const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');
+        const cpfInput = dados.cpf; 
+
+        const cpfExiste = storedUsers.some((user: { cpf: any; }) => user.cpf === cpfInput);
+        
+
+        if (cpfExiste) {
+            setCriarDiv(true);
+            setTimeout(() => {
+                window.location.reload();
+            }, 3000);
+
+
+
+        
+        } else {
+            storedUsers.push(dados);
+            localStorage.setItem('users', JSON.stringify(storedUsers));
+            alert('Usuário adicionado com sucesso!');
+        }
+        
+        
+        /* Cadastro
+        const storedUsers = JSON.parse(localStorage.getItem('users') || '[]'); 
+        
+        storedUsers.push(dados); 
+        localStorage.setItem('users', JSON.stringify(storedUsers)); 
+
+        /* Login
+        const testeCpf = "486.394.688-00";
+        const users = JSON.parse(localStorage.getItem("users") || "[]");
+
+        const userExiste = storedUsers.some((user: { cpf: string; })=> user.cpf == testeCpf);
+
+        if (userExiste)
+        {
+            console.log("EXISTEEEEE")
+        }
+        else
+        {
+            console.log("Não passou F :(")
+        }*/
     }
     
 
@@ -34,6 +78,7 @@ export default function Cadastro() {
                 <div className={styles.containerExternoForm}>
                     <div className={styles.containerForm}>
                         <h1>Crie sua conta Porto</h1>
+                        {criarDiv && <h1 className={styles.error}> Cpf Já Cadastrado em Sistema</h1>}
                         <form onSubmit={onSubmit(handleSubmit)} className={styles.form}>
                             <div className={styles.linha}>
                                 <div className={styles.formulario}>
