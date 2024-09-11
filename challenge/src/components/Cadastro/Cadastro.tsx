@@ -21,6 +21,7 @@ export default function Cadastro() {
     
     const {register, handleSubmit: onSubmit, watch, formState: {errors}} = useForm({resolver:yupResolver(schema)});
     const [criarDiv, setCriarDiv] = useState(false);
+    const [criarDivSenhas, setDivSenhas] = useState(false);
     
     const handleSubmit = (dados:any) => {
 
@@ -28,10 +29,19 @@ export default function Cadastro() {
         const cpfInput = dados.cpf; 
 
         const cpfExiste = storedUsers.some((user: { cpf: any; }) => user.cpf === cpfInput);
-        
-
-        if (cpfExiste) {
-            setCriarDiv(true);
+        const senhasIguais = storedUsers.some(()=> dados.senha1 != dados.senha2)
+        console.log(senhasIguais)
+        console.log(cpfExiste)
+        if (cpfExiste || senhasIguais) {
+            if(senhasIguais == true)
+            {
+                setDivSenhas(true);
+            }
+            else
+            {
+                setCriarDiv(true);
+            }
+            
             setTimeout(() => {
                 window.location.reload();
             }, 3000);
@@ -45,27 +55,7 @@ export default function Cadastro() {
             alert('Usuário adicionado com sucesso!');
         }
         
-        
-        /* Cadastro
-        const storedUsers = JSON.parse(localStorage.getItem('users') || '[]'); 
-        
-        storedUsers.push(dados); 
-        localStorage.setItem('users', JSON.stringify(storedUsers)); 
-
-        /* Login
-        const testeCpf = "486.394.688-00";
-        const users = JSON.parse(localStorage.getItem("users") || "[]");
-
-        const userExiste = storedUsers.some((user: { cpf: string; })=> user.cpf == testeCpf);
-
-        if (userExiste)
-        {
-            console.log("EXISTEEEEE")
-        }
-        else
-        {
-            console.log("Não passou F :(")
-        }*/
+    
     }
     
 
@@ -79,6 +69,8 @@ export default function Cadastro() {
                     <div className={styles.containerForm}>
                         <h1>Crie sua conta Porto</h1>
                         {criarDiv && <h1 className={styles.error}> Cpf Já Cadastrado em Sistema</h1>}
+                        {criarDivSenhas && <h1 className={styles.error}>Suas Senhas não são Iguais, Tente Novamente</h1>}
+
                         <form onSubmit={onSubmit(handleSubmit)} className={styles.form}>
                             <div className={styles.linha}>
                                 <div className={styles.formulario}>

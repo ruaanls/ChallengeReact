@@ -3,10 +3,12 @@ import img from "../../img/img-cadastro-veiculos.png"
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { number, object, string } from "yup";
+import { useState } from "react";
+import { Navigate, useNavigate } from "react-router-dom";
 
 
 export default function CadastroVeiculo() {
-
+    const navigate = useNavigate();
     const schema = object({
         placa:string().required("Campo Obrigatório").min(7,"Sua Placa deve ter pelo menos 7 dígitos ").max(8,"Sua Placa deve ter 7 dígitos "),
         marca:string().required("Campo Obrigatório").min(2, "O nome da marca deve ter 2 ou mais caracteres"),
@@ -15,10 +17,31 @@ export default function CadastroVeiculo() {
     })
     
     const {register, handleSubmit: onSubmit, watch, formState: {errors}} = useForm({resolver:yupResolver(schema)});
-    
+    const [criarDiv, setCriarDiv] = useState(false);
     const handleSubmit = (dados:any) => {
-           console.log(dados);
+            const storedUsers = JSON.parse(localStorage.getItem('users') || '[]');
+            const placaInput = dados.placa; 
+            const placaExiste = storedUsers.some((user: { placa: any; }) => user.placa === placaInput);
+            if (placaExiste) {
+                
+                setCriarDiv(true);
+                setTimeout(() => {
+                    window.location.reload();
+                }, 3000);
+            } 
+            else {
+                storedUsers.push(dados);
+                localStorage.setItem('users', JSON.stringify(storedUsers));
+                setTimeout(() =>
+                {
+                    navigate("/");
+                }, 2000);
+                
+            }
+
+        
     }
+
 
 
 
@@ -35,6 +58,7 @@ export default function CadastroVeiculo() {
                     
                     <div className={styles.containerForm}>
                         <h1>Cadastro de veículo</h1>
+                        {criarDiv && <h1 className={styles.error}>Placa já Existe</h1>}
                         <form onSubmit={onSubmit(handleSubmit)} className={styles.form}>
                             <div className={styles.linhaContainer}>
                                 <div className={styles.linha}>
