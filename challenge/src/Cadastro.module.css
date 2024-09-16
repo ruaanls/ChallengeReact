@@ -132,6 +132,14 @@
     color: rgb(224, 22, 22);
     
 }
-
-
-    
+@media (max-width: 576px) {
+    .containerImg
+    {
+        display: none;
+        
+    }
+    .containerExternoForm
+{      
+    width: 100%;      
+}
+}
