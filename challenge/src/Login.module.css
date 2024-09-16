@@ -46,6 +46,7 @@
     width: 100%;
     font-weight: 500;
     margin-bottom: 5%;
+    
 }
 .form
 {
@@ -102,5 +103,20 @@
 {
     color: rgb(224, 22, 22);
     
+}
+
+@media (max-width: 576px) {
+    .containerImg
+    {
+        display: none;
+        
+    }
+    .containerExternoForm
+{
+    background: linear-gradient(to right, #0c2f88 3%, #082770 15%, #020848 84%);
+    
+    width: 100%;
+    
+}
 }
 
