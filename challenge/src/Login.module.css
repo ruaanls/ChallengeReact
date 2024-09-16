@@ -138,4 +138,9 @@
 {
     width: 100%;
 }
+.containerForm h1
+{
+    font-size: 1.7rem;   
+}
+
 }
