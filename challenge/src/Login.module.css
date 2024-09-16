@@ -112,11 +112,19 @@
         
     }
     .containerExternoForm
-{
-    background: linear-gradient(to right, #0c2f88 3%, #082770 15%, #020848 84%);
-    
+{ 
     width: 100%;
-    
 }
 }
-
+@media (min-width: 577px) and (max-width: 767px) {
+    .containerImg
+    {
+        display: none;
+        
+    }
+    .containerExternoForm
+{
+    width: 100%;
+    font-size: 1.0rem;
+}
+}
