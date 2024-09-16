@@ -65,3 +65,147 @@ img
 {
     color: white;
 }
+
+
+@media (min-width: 1200px) {
+
+    .menu a p, .loginHeader a p{
+    
+    color: rgb(255, 255, 255);
+    border: none;
+    font-size: 1rem;
+
+
+}
+
+
+.botao {
+    background-color: #0065FC;
+    text-decoration: none;
+    border: none;
+    padding: 2% 15%;
+    width: 2% 60%;
+    font-size: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+}
+
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .menu a p, .loginHeader a p{
+    
+        color: rgb(255, 255, 255);
+        border: none;
+        font-size: 1rem;
+    
+    
+    }
+    
+    
+    .botao {
+        background-color: #0065FC;
+        text-decoration: none;
+        border: none;
+        padding: 2% 10% 2%;
+        width: 2% 40%;
+        font-size: 0.8rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .loginHeader {
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+    width: 20%;
+}
+
+img
+{
+    width: 30%;
+    height: 20%;
+}
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .menu a p, .loginHeader a p{
+    
+        color: rgb(255, 255, 255);
+        border: none;
+        font-size: 0.7rem;
+        width: 100%;
+    
+    }
+    
+    
+    .botao {
+        background-color: #0065FC;
+        text-decoration: none;
+        border: none;
+        padding: 2% 12% 2%;
+        font-size: 0.6rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .loginHeader {
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11px;
+    width: 19%;
+}
+
+img {
+    width: 30%;
+    height: 20%;
+}
+}
+
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .menu a p, .loginHeader a p{
+    
+        color: rgb(255, 255, 255);
+        border: none;
+        font-size: 0.7rem;
+        width: 100%;
+    
+    }
+    
+    
+    .botao {
+        background-color: #0065FC;
+        text-decoration: none;
+        border: none;
+        padding: 2% 12% 2%;
+        font-size: 0.7rem;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    .loginHeader {
+    display: inherit;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    width: 20%;
+}
+
+img {
+    width: 30%;
+    height: 20%;
+}
+
+}
+
+
+
+
+

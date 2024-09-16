@@ -1,14 +1,13 @@
-import img from "../../../public/img/img-banner.png";
-import oleo from "../../../public/img/img-troca-oleo.png";
-import revisao from "../../../public/img/img-revisao.png";
-import bateria from "../../../public/img/img-bateria.png";
-import styles from "../../Pinicial.module.css";
 import { Link } from "react-router-dom";
-export default function PaginaInicial()
-{
-    return(
+import img from "../../../public/img/img-banner.png";
+import bateria from "../../../public/img/img-bateria.png";
+import revisao from "../../../public/img/img-revisao.png";
+import oleo from "../../../public/img/img-troca-oleo.png";
+import styles from "../../Pinicial.module.css";
+export default function PaginaInicial() {
+    return (
         <main>
-            
+
             <div className={styles.containerInicio}>
                 <div className={styles.inicial}>
                     <p>Centros Automotivos Porto</p>
@@ -17,18 +16,18 @@ export default function PaginaInicial()
                     <button className={styles.botaoHome}><Link to={"/manutencao"}><h1>Agende um serviço</h1></Link></button>
                 </div>
             </div>
-            
+
             <div className={styles.containerConteudo}>
                 <div className={styles.txtOpcoes}>
                     <h1>O que você quer fazer hoje?</h1>
                     <p>Resolva as questões referentes ao seu veículo</p>
                 </div>
-                
+
                 <div className={styles.opcaoPrincipal}>
                     <button className="opcao"><Link to={"/manutencao"}><h1>Marcar Conserto</h1><p>Agende uma visita para consertar ou realizar pequenos reparos no seu veículo</p></Link></button>
                     <button className="opcao"><Link to={"/manutencao"}><h1>Realizar pré-diagnóstico</h1><p>Use nossa IA para ter um pré-diagnóstico e pré-orçamento</p></Link></button>
                     <button className="opcao"><Link to={"/cadastroVeiculo"}><h1>Cadastrar Veículos</h1><p>Cadastre o seu veículo para usar nossas outras funcionalidades</p></Link></button>
-                </div> 
+                </div>
 
                 <div className={styles.containerMapa}>
                     <div className={styles.containerTxt}>
@@ -36,7 +35,7 @@ export default function PaginaInicial()
                         <p>Possuimos centros automotivos e oficinas credenciadas em toda grande São Paulo, confira no mapa ao lado.</p>
                     </div>
                     <div className="mapa">
-                    <iframe src="https://www.google.com/maps/d/embed?mid=1_yvhH0-7oqZIQOjvno07EoN6m6mgxvg&ehbc=2E312F&noprof=1" width="840" height="450"></iframe>
+                        <iframe src="https://www.google.com/maps/d/embed?mid=1_yvhH0-7oqZIQOjvno07EoN6m6mgxvg&ehbc=2E312F&noprof=1"></iframe>
                     </div>
                 </div>
                 <div className={styles.containerGeral}>
@@ -68,9 +67,9 @@ export default function PaginaInicial()
                         </div>
                     </div>
                 </div>
-                
+
             </div>
-            
+
         </main>
     )
 }
