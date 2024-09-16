@@ -142,4 +142,14 @@
 {      
     width: 100%;      
 }
+@media (min-width: 577px) and (max-width: 767px) {
+    .containerImg
+    {
+        display: none; 
+    }
+    .containerExternoForm
+{
+     width: 100%;  
+}
+}
 }
