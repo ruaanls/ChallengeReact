@@ -5,7 +5,7 @@
     align-items: center;
     background-color: #001B74;
     margin: 0;
-    padding:  1% 4%;
+    padding:  0.7% 4%;
     position: sticky;
     top: 0;
 }
@@ -31,7 +31,7 @@ img
     border-bottom: none;
 }
 
-.menu a p, .loginHeader a p
+.menu a p, .loginHeader p
 {
     
     color: white;
@@ -42,10 +42,10 @@ img
 .loginHeader
 {
     display: inherit;
-    justify-content: space-between;
+    
     align-items: center;
-    gap: 25px;
-    width: 15%;
+    gap: 50px;
+    width: 25%;
 }
 
 .botao
@@ -53,8 +53,8 @@ img
     background-color: #0065FC;
     text-decoration: none;
     border: none;
-    padding: 4%;
-    width: 100%;
+    padding: 3% 4%;
+    
     font-size: 1.3rem;
     border-radius: 10px;
     cursor: pointer;
@@ -67,7 +67,7 @@ img
 }
 
 
-@media (min-width: 1200px) {
+/*@media (max-width: 1200px) {
 
     .menu a p, .loginHeader a p{
     
@@ -76,22 +76,11 @@ img
     font-size: 1rem;
 
 
-}
+}*/
 
 
-.botao {
-    background-color: #0065FC;
-    text-decoration: none;
-    border: none;
-    padding: 2% 15%;
-    width: 2% 60%;
-    font-size: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-}
 
 
-}
 
 
 @media (min-width: 992px) and (max-width: 1199px) {

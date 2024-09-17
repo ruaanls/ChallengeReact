@@ -26,7 +26,7 @@ export default function Header()
             <div className={style.loginHeader}>
                 <button className={style.botao}><Link to={"/cadastro"}>Abra sua Conta</Link></button>
                 {nomeUsuario ? (
-                    <Link to={"/login"}><p>{nomeUsuario}</p></Link> // Exibe o nome do usuário se ele estiver logado
+                    <p>{nomeUsuario}</p> // Exibe o nome do usuário se ele estiver logado
                 ) : (
                     <Link to={"/login"}><p>Login</p></Link> // Exibe "Login" caso não tenha usuário logado
                 )}

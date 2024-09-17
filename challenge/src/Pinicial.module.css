@@ -90,7 +90,7 @@ a
     padding: 2%;
     width: 30%;
     max-width: 377px;
-    height: 100%;
+    height: 198px;
     max-height: 220px;
     cursor: pointer;
 }
@@ -122,6 +122,7 @@ a
     padding: 2% 10%;
     padding-left: 12%;
     color: white;
+    width: 50%;
     
 }
 
@@ -168,12 +169,13 @@ a
     cursor: pointer;
     width: 90%;  
     line-height: 0.6;
+    padding: 2%;
 }
 
 .bannerTxt
 {
     width: 80%;
-    padding-left: 5%;
+    padding: 3% 5%;
     
 }
 
@@ -199,7 +201,7 @@ a
 }
 .bannerImg
 {
-    width: 45%;
+    width: 30%;
     border-radius: 12px;
 }
 
@@ -213,8 +215,13 @@ a
 }
 
 iframe{
-    width: 500px;
-    height: 400px;
+    width: 100%;
+    height: 500px;
+}
+
+.mapa
+{
+    width: 50%;
 }
 
 .cardsContainer img
@@ -257,9 +264,9 @@ iframe{
 
 
 
-@media (min-width: 1200px) {
+@media (max-width: 1200px) {
     iframe{
-        width: 480px;
+        width: 800px;
         height: 400px;
         margin-right: 100px;
     }
@@ -272,7 +279,7 @@ iframe{
         padding: 2%;
         width: 50%;
         max-width: 338px;
-        height: 100%;
+        height: 196px;
         max-height: 192px;
         cursor: pointer;
     }

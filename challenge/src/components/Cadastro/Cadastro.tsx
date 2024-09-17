@@ -4,10 +4,13 @@ import img from "../../img/img-login.png";
 import { useForm, SubmitHandler } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import { number, object, string } from "yup";
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function Cadastro() {
+
+    const navigate = useNavigate();
     const schema = object({
         cpf:string().required("Campo Obrigatório").min(11,"Seu CPF deve ter 11 dígitos ").max(14,"Seu CPF deve ter no máximo 14 dígitos"),
         nome:string().required("Campo Obrigatório").min(3,"Seu deve ter mais que 3 letras "),
@@ -52,7 +55,10 @@ export default function Cadastro() {
         } else {
             storedUsers.push(dados);
             localStorage.setItem('users', JSON.stringify(storedUsers));
-            alert('Usuário adicionado com sucesso!');
+            setTimeout(() => {
+                navigate("/");
+                
+            }, 1000);
         }
         
     
