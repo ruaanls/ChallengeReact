@@ -137,4 +137,36 @@
     font-size: 1.3rem;
     font-weight: bold;
 }
-
+@media (max-width: 576px) {
+    .containerImg
+    {
+        display: none;
+        
+    }
+    .containerExternoForm
+{
+    width: 100%;
+}
+}
+@media (min-width: 577px) and (max-width: 767px) {
+    .containerImg
+    {
+        display: none;
+        
+    }
+    .containerExternoForm
+{
+    width: 100%;
+}
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .containerImg
+    {
+        display: none;
+        
+    }
+    .containerExternoForm
+{
+        width: 100%;
+}
+}
